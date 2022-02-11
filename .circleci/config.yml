@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     executor:
-      name: node/default
+      name: node/with-cache
       tag: '10.4'
     steps:
       - checkout
@@ -13,6 +13,6 @@ jobs:
             - run: npm install
       - run: npm run test
 workflows:
-  say-hello-workflow:
+  "Hello Workflow":
     jobs:
       - build
